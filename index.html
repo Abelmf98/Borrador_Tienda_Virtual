@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Julio Antonio Ramos Gago (jramosgago.guadalupe@alumnado.fundacionloyola.net)" />
+    <meta name="description" content="Tienda virtual desarrollada en javascript como ejercicio de DWEC" />
+    <title>Guilty Sweet</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="css/estilo.css" />
+    <!--Google-->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Guilty Sweet</h1>
+        <div class="cart-menu align-items-center d-flex">
+            <div class="header-div">
+              <ul>
+                <li>
+                  <a href="" class="carrito"><i class="fas fa-shopping-cart"></i><span>Carrito</span>
+                    <span id="menucarrito" data-action="cart-can" class="badge rounded-circle">0</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="divProducto">
+            <h1>Productos</h1>
+            <button id="verCarrito">Carrito</button>
+        </div>
+        <div id="divCarrito">
+            <h1>Carrito</h1>
+            <button id="verProductos">Productos</button>
+            <div class="formulario" id="form">
+                  <div>
+                      <label for="nombre">Nombre:</label><br>
+                      <input type="text" placeholder="Introduzca Nombre de Usuario">
+                  </div>
+                  <div>
+                      <label for="correo">Correo:</label><br>
+                      <input type="email" placeholder="Introduzca Correo">
+                  </div>
+                  <div>
+                      <label for="contraseña">contraseña:</label><br>
+                      <input type="password" placeholder="Introduzca una contraseña">
+                  </div>
+                  <div>
+                      <label for="direccion">Direccion:</label><br>
+                      <input type="text" placeholder="Introduzca direccion">
+                  </div>
+                  <div>
+                      <label for="fecha">Fecha de nacimiento:</label><br>
+                      <input type="date" id="fecha">
+                  </div>
+                  <div>
+                      <label for="dni">DNI:</label><br>
+                      <input type="text" placeholder="Introduzca DNI" pattern="[0-9]{8}[A-Za-z]{1}" id="dni">
+                  </div>
+                  <div>
+                      <button id="boton">Enviar</button>
+                  </div>
+          </div>
+          <div id="productoCarritos">
+              <h1>Estos son tus productos</h1>
+          </div>
+        </div>
+    </main>
+    <footer>
+      <p>Tienda online de reposteria - Abel Mansilla Felipe</p>
+    </footer>
+    <!--Script JS-->
+    <script type="module" src="js/tienda.js"></script>
+</body>
+</html>

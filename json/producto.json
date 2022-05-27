@@ -1,0 +1,36 @@
+[
+    {
+        "imagen":"./img/tarta-queso.jpg",
+        "nombre":"Tarta de queso",
+        "precio": 15,
+        "oferta":false
+    },
+
+    {
+        "imagen":"./img/almendras.jpg",
+        "nombre":"Tarta de almendras",
+        "precio": 10,
+        "oferta":true
+    },
+
+    {
+        "imagen":"./img/tpastelera.jpg",
+        "nombre":"Tarta de crema pastelera",
+        "precio": 12.50,
+        "oferta":false
+    },
+
+    {
+        "imagen":"./img/chocolate.jpg",
+        "nombre":"Tarta de chocolate",
+        "precio": 14,
+        "oferta":true
+    },
+
+    {
+        "imagen":"./img/brazogitano.jpeg",
+        "nombre":"Brazo de gitano",
+        "precio": 20,
+        "oferta":false
+    }
+]

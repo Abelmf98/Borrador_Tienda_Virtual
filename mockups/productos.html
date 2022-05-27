@@ -1,0 +1,56 @@
+<html lang="es"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Julio Antonio Ramos Gago (jramosgago.guadalupe@alumnado.fundacionloyola.net)">
+    <meta name="description" content="Tienda virtual desarrollada en javascript como ejercicio de DWEC">
+    <title>Guilty Sweet</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/estilo.css">
+    <!--Google-->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Guilty Sweet</h1>
+        <div class="cart-menu align-items-center d-flex">
+            <div class="header-div">
+              <ul>
+                <li>
+                  <a href="" class="carrito"><i class="fas fa-shopping-cart"></i><span>Carrito</span>
+                    <span id="menucarrito" data-action="cart-can" class="badge rounded-circle">2</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="divProducto" style="display: block;">
+            <h1>Productos</h1>
+            <button id="verCarrito">Carrito</button>
+        </div>  
+        <div class="cajas"><div class="caja">
+          <img src="../img/tarta-queso.jpg">
+          <p style="color: steelblue;">Tarta de queso</p>
+          <p>10.00€</p>
+          <P style="color: tomato;">¡¡¡OFERTA!!!</P>
+          <button>Añadir</button>
+        </div>
+          <div class="caja">
+            <img src="./img/almendras.jpg">
+            <p style="color: steelblue;">Tarta de almendras</p>
+            <p>10.00€</p><button>Añadir</button></div><div class="caja"><img src="./img/tpastelera.jpg"><p style="color: steelblue;">Tarta de crema pastelera</p><p>12.50€</p><button>Añadir</button></div><div class="caja"><img src="./img/chocolate.jpg"><p style="color: steelblue;">Tarta de chocolate</p><p>14.00€</p><button>Añadir</button></div><div class="caja"><img src="./img/brazogitano.jpeg"><p style="color: steelblue;">Brazo de gitano</p><p>20.00€</p><button>Añadir</button></div></div></div>
+        <div id="divCarrito">
+            <h1>Carrito</h1>
+            <button id="verProductos">Productos</button>
+        </div>
+    </main>
+    <footer>
+      <p id="pie">Tienda online de reposteria - Abel Mansilla Felipe</p>
+    </footer>
+    <!--Script JS-->
+    <script type="module" src="../js/tienda.js"></script>
+
+</body></html>
