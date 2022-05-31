@@ -16,16 +16,21 @@ export class Modelo{
 
         await fetch('./json/producto.json')
             .then(respuesta => respuesta.json())
-            .then(producto=>{ this.productos = producto});
+            .then(producto=>{ console.log(producto)
+                this.setProductos(producto)})
 
 
+    }
+
+    setProductos(producto){
+        this.productos = producto
     }
 
     getProductos(){
         return this.productos
     }
     
-    push(producto){
+    pushCarrito(producto){
         this.carritos.push(producto)
     }
 }

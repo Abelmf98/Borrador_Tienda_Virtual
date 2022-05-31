@@ -2,17 +2,20 @@ import {VistaProductos} from './vistas/vistaproductos.js'
 import {VistaCarrito} from './vistas/vistacarrito.js'
 import {Modelo} from './modelos/modelo.js'
 
-export class Tienda{
+class Tienda{
 
     constructor(){
 
         window.onload = this.iniciar.bind(this)
     }
 
-    iniciar(){
+    /**
+     * Esperamos el resultado de la promesa
+     */
+    async iniciar(){
 
         this.modelo = new Modelo()
-        this.modelo.cargar()
+        await this.modelo.cargar()
         this.vistaProductos = new VistaProductos(this, this.modelo.getProductos())
         this.vistaCarrito = new VistaCarrito(this)
 
@@ -32,7 +35,7 @@ export class Tienda{
     }
 
     anadirCarrito(producto){
-        this.modelo.push(producto)
+        this.modelo.pushCarrito(producto)
         this.vistaProductos.setNumProductos(this.modelo.carritos.length)
         this.vistaCarrito.recogerCarrito(producto)
     }

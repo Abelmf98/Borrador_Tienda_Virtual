@@ -1,12 +1,11 @@
-import {Tienda} from './../tienda.js'
 
 export class VistaProductos{
 
     constructor(controlador, productos){
 
-        this.controlador = new Tienda()
+        this.controlador = controlador
         document.getElementById('verCarrito').onclick = this.verCarrito.bind(this);
-        this.cargarProductos(this.tienda.crearVista())
+        this.cargarProductos(productos)
     }
 
     mostrar(ver){
@@ -32,11 +31,7 @@ export class VistaProductos{
         cajas.classList.add('cajas')
 
         productos.forEach(producto => {
-            
-        });
-            for (let producto of productos) {
-
-                /* let caja = document.createElement('div')
+                let caja = document.createElement('div')
                 cajas.appendChild(caja)
                 caja.classList.add('caja')
 
@@ -63,8 +58,8 @@ export class VistaProductos{
                 caja.appendChild(button)
                 button.textContent = 'Añadir'
                 
-                button.onclick = this.anadirCarrito.bind(this, producto) */
-            }
+                button.onclick = this.anadirCarrito.bind(this, producto)
+            })
     }
 
     anadirCarrito(producto){
