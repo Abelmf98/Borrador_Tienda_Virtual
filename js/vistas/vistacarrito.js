@@ -5,6 +5,8 @@ export class VistaCarrito{
         this.controlador = controlador
         document.getElementById('verProductos').onclick = this.verProductos.bind(this)
         document.getElementById('boton').onclick = this.validar.bind(this)
+
+        
     }
     
     mostrar(ver){
@@ -25,6 +27,34 @@ export class VistaCarrito{
     validar(){
         this.validarLetraDNI()
         this.validacionEdad()
+
+        var valor = document.getElementById('nombre').value
+        if(valor == null || valor.length == 0 || /^\s+$/.test(valor)){
+            window.alert('El campo nombre es obligatorio')
+            return false
+        }
+
+        var correo = document.getElementById('correo').value
+        var exp = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
+        var esValido = exp.test(correo)
+
+        if(!esValido){
+            window.alert('El correo es obligatorio')
+            return false
+        }
+
+        var contrasenia = document.getElementById('password').value
+        if(contrasenia.length <8){
+            window.alert('La contraseña debe ser rellena, introduzca 8 caracteres o mas')
+            return false
+        }
+
+        var direccion = document.getElementById('direccion').value
+        if(direccion == null || direccion.length == 0 || /^\s+$/.test(direccion) ){
+            window.alert('Se debe rellenar la direccion')
+            return false
+        }
+
 
         document.getElementById('form').style.display="none"
         document.getElementById('productoCarritos').style.display="block"
@@ -74,9 +104,7 @@ export class VistaCarrito{
 
         console.log(edad)
        
-        if(edad>=18)
-            window.alert("Mayor de 18 años")
-        else
+        if(edad<18)
             window.alert("Menor de 18 años")
     }
 
