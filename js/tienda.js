@@ -10,6 +10,9 @@ import {VistaProductos} from './vistas/vistaproductos.js'
 import {VistaCarrito} from './vistas/vistacarrito.js'
 import {Modelo} from './modelos/modelo.js'
 
+/**
+ * @class clase Tienda 
+ */
 class Tienda{
 
     /**

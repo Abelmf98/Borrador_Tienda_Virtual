@@ -6,6 +6,9 @@
  * @license GPL-3.0-or-later
  */
 
+/**
+ * @class clase VistaCarrito exportada
+ */
 export class VistaCarrito{
 
     /**

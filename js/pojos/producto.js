@@ -5,6 +5,10 @@
  * @version 1.0
  * @license GPL-3.0-or-later
  */
+
+/**
+ * @class clase Producto exportada 
+ */
 export class Producto{
 
     /**

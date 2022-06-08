@@ -7,6 +7,9 @@
  */
 import {Producto} from "../pojos/producto.js";
 
+/**
+ * @class clase Modelo exportada
+ */
 export class Modelo{
     /**
      * Constructor principal de la clase Modelo
