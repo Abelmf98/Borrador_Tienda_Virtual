@@ -1,35 +1,54 @@
+/**
+ * @file modelo.js
+ * @brief Modelo
+ * @author Abel Mansilla Felipe <amansillafelipe.guadalupe@alumnado.fundacionloyola.net>
+ * @version 1.0
+ * @license GPL-3.0-or-later
+ */
 import {Producto} from "../pojos/producto.js";
 
 export class Modelo{
+    /**
+     * Constructor principal de la clase Modelo
+     */
     constructor(){
         this.productos = []
         this.carritos = []
         this.cargar()
     }
 
+    /**
+     * Método para cargar los productos recogidos del JSON
+     */
     async cargar(){
-        /* this.productos[0] = new Producto('./img/tarta-queso.jpg', 'Tarta de queso', 15, false)
-        this.productos[1] = new Producto('./img/almendras.jpg', 'Tarta de almendras', 10, true)
-        this.productos[2] = new Producto('./img/tpastelera.jpg', 'Tarta de crema pastelera', 12.50, false)
-        this.productos[3] = new Producto('./img/chocolate.jpg', 'Tarta de chocolate', 14, true)
-        this.productos[4] = new Producto('./img/brazogitano.jpeg', 'Brazo de gitano', 20, false) */
-
         await fetch('./json/producto.json')
             .then(respuesta => respuesta.json())
-            .then(producto=>{ console.log(producto)
-                this.setProductos(producto)})
+            .then(productos=>{ console.log(productos)
+                this.setProductos(productos)})
 
 
     }
 
+    /**
+     * Método para recoger los productos
+     * @param {*} producto 
+     */
     setProductos(producto){
         this.productos = producto
     }
 
+    /**
+     * Método para obtener los productos
+     * @returns this.productos
+     */
     getProductos(){
         return this.productos
     }
     
+    /**
+     * Método para añadir productos al carrrito
+     * @param {*} producto 
+     */
     pushCarrito(producto){
         this.carritos.push(producto)
     }

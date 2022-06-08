@@ -1,6 +1,17 @@
-
+/**
+ * @file vistaproductos.js
+ * @brief Vista de Productos => (Vista)
+ * @author Abel Mansilla Felipe <amansillafelipe.guadalupe@alumnado.fundacionloyola.net>
+ * @version 1.0
+ * @license GPL-3.0-or-later
+ */
 export class VistaProductos{
 
+    /**
+     * Constructor principal de la clase VistaProductos
+     * @param {*} controlador 
+     * @param {*} productos 
+     */
     constructor(controlador, productos){
 
         this.controlador = controlador
@@ -8,6 +19,10 @@ export class VistaProductos{
         this.cargarProductos(productos)
     }
 
+    /**
+     * Método para visualizar o esconder los productos
+     * @param {*} ver 
+     */
     mostrar(ver){
 
         if(ver){
@@ -19,11 +34,19 @@ export class VistaProductos{
         }
     }
 
+    /**
+     * Método que sirve para mostrar el carrito
+     */
     verCarrito(){
 
         this.controlador.verCarrito()
     }
 
+    /**
+     * Método para cargar los productos
+     * Se contruye mediante un array de productos
+     * @param {*} productos 
+     */
     cargarProductos(productos){
 
         let cajas = document.createElement('div')
@@ -62,16 +85,29 @@ export class VistaProductos{
             })
     }
 
+    /**
+     * Método para añadir productos al carrito
+     * @param {*} producto 
+     */
     anadirCarrito(producto){
         console.log('Pulsado')
         console.log(producto)
         this.controlador.anadirCarrito(producto)
     }
 
+    /**
+     * Método para mostrar el total de productos que tenemos en el carrito
+     * @param {*} entero 
+     */
     setNumProductos(entero){
         document.getElementById('menucarrito').textContent = entero   
     }
 
+    /**
+     * Método para mostar las ofertas, con lo cual pasaremos el ratón por encima para visualizarlas
+     * @param {*} producto 
+     * @param {*} caja 
+     */
     ofertas(producto, caja){
         /* <div class="cajas"><div class="caja">
         <img src="../img/tarta-queso.jpg">
@@ -87,6 +123,11 @@ export class VistaProductos{
 
     }
 
+    /**
+     * Método para ocultar las ofertas cuando quitamos el ratón de encima
+     * @param {*} producto 
+     * @param {*} caja 
+     */
     ocultar(producto, caja){
         console.log(caja.onmouseout)
 
